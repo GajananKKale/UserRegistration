@@ -63,7 +63,7 @@ function Table() {
         try {
             const token = localStorage.getItem("token");
             console.log("[fetchData] token:", token);
-            const res = await axios.get("http://localhost:8000/api/user", {
+            const res = await axios.get("https://usersregistration.onrender.com/api/user", {
                 headers: { Authorization: `Bearer ${token}` },
             });
             console.log("[fetchData] got:", res.data.user);
@@ -96,7 +96,7 @@ function Table() {
         try {
             const token = localStorage.getItem("token");
             console.log("[handleDelete] token:", token);
-            const res = await axios.delete(`http://localhost:8000/api/user/${id}`, {
+            const res = await axios.delete(`https://usersregistration.onrender.com/api/user/${id}`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             console.log("[handleDelete] success:", res.data);
@@ -141,7 +141,7 @@ function Table() {
             const token = localStorage.getItem("token");
             console.log("[handleSubmit] token:", token);
             const res = await axios.put(
-                `http://localhost:8000/api/user/${selectedUserId}`,
+                `https://usersregistration.onrender.com/api/user/${selectedUserId}`,
                 updateUser,
                 { headers: { Authorization: `Bearer ${token}` } }
             );

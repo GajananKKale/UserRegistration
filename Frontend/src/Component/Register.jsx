@@ -33,7 +33,7 @@ function Register() {
                 password: formData.password
             }
 
-            let res = await axios.post("http://localhost:8000/api/user/", newUser)
+            let res = await axios.post("https://usersregistration.onrender.com/api/user/", newUser)
             // console.log(res.data);
             alert(res.data.message)
             setFormData({

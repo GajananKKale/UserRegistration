@@ -30,7 +30,7 @@ function Login() {
     let handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("http://localhost:8000/api/user/login", {
+            const res = await axios.post("https://usersregistration.onrender.com/api/user/login", {
                 email: formData.email,
                 password: formData.password
             });

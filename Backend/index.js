@@ -13,7 +13,8 @@ let _dirname = path.resolve()
 
 //middleware
 app.use(cors({
-  origin: "http://localhost:5173",
+  // origin: "http://localhost:5173",
+  origin: "https://usersregistration.onrender.com",
   credentials: true
 }));
 
